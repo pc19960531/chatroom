@@ -1,0 +1,100 @@
+.chat {
+  height: 100%;
+  background: rgb(243, 243, 243);
+}
+
+.messagewrap {
+  width: 330px;
+  margin: 0 auto;
+  height: 90%;
+  padding: 15px 0;
+}
+
+.bottom {
+  width: 330px;
+  margin: 0 auto;
+  height: 10%;
+  padding: 10px 0;
+}
+
+.list {
+  border: 1px solid #d9d9d9;
+  height: 100%;
+  border-radius: 4px;
+  padding: 6px;
+  overflow: scroll;
+}
+
+.sendWrap {
+  display: flex;
+  height: 100%;
+}
+
+.left {
+  flex: 1;
+  padding: 0 10px 0 0;
+}
+
+.area {
+  border: 1px solid #d9d9d9;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #666;
+  background-color: #fff;
+  border-radius: 4px;
+  padding: 6px 7px;
+  height: 100%;
+  outline: none;
+  width: 100%;
+}
+
+.right button {
+  width: 50px;
+  background: #108ee9;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 7px 0;
+  height: 100%;
+}
+
+.message {
+  display: flex;
+}
+
+.mymessage {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.avatar {
+  width: 50px;
+  padding: 5px;
+}
+
+.avatar img {
+  width: 100%;
+}
+
+.show {
+  flex: 1;
+  padding: 5px;
+}
+
+.name {
+  color: rgb(181, 189, 200);
+  font-size: 18px;
+}
+
+.myname {
+  color: rgb(181, 189, 200);
+  font-size: 18px;
+  text-align: right;
+}
+
+.msg {
+  font-size: 16px;
+  background: white;
+  padding: 10px;
+  border-radius: 5px;
+}
