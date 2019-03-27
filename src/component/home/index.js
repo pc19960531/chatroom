@@ -52,7 +52,16 @@ class Home extends Component {
                             this.props.history.push('/chat')
                         }}
                     >
-                        确定
+                        游客登录
+                    </button>
+                </div>
+                <div className={styles.submit}>
+                    <button
+                        onClick={() => {
+                            this.props.history.push('/signin')
+                        }}
+                    >
+                        账号登录
                     </button>
                 </div>
             </div>

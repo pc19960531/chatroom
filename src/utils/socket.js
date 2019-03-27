@@ -5,7 +5,9 @@ import store from '../store'
 const log = console.log;
 
 // init
-const socket = io('/v1');
+// const socket = io('/v1');
+
+const socket = io('http://localhost:7001/v1');
 
 export const socketInit = (cb) => {
   socket.on('connect', () => {

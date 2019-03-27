@@ -2,39 +2,55 @@
 import React, { Component } from 'react'
 import styles from './index.css'
 import { Link } from 'react-router-dom'
+import { Tabs } from 'antd';
 
-class Signin extends Component {
+const TabPane = Tabs.TabPane;
+
+class SignIn extends Component {
     render() {
         return (
             <div className={styles.signin}>
                 <div className={styles.content}>
-                    <div className={styles.panel}>
-                        <div className={styles.inputwrap}>
-                            <div className={styles.input}>
-                                <input placeholder="请输入手机号"></input>
+                    <Tabs onChange={(key) => {
+                        console.log(key)
+                    }} type="card">
+                        <TabPane tab="Tab 1" key="1">
+                            <div className={styles.panel}>
+                                <div className={styles.inputwrap}>
+                                    <div className={styles.input}>
+                                        <div>
+                                            手机号
+                                </div>
+                                        <input placeholder="请输入手机号"></input>
+                                    </div>
+                                    <div className={styles.input}>
+                                        <div>
+                                            密码
+                                </div>
+                                        <input placeholder="请输入密码"></input>
+                                    </div>
+                                </div>
+                                <div className={styles.submit}>
+                                    <button
+                                        onClick={() => {
+                                            this.props.history.goBack();
+                                        }}
+                                        className={styles.backbutton}
+                                    >
+                                        返回
+                            </button>
+                                    <button>
+                                        登录
+                            </button>
+                                </div>
                             </div>
-                            <div className={styles.input}>
-                                <input placeholder="请输入密码"></input>
-                            </div>
-                        </div>
-                    </div>
-                    <button>
-                        注册
-                    </button>
-                </div>
-                <div className={styles.footer}>
-                    <div className={styles.links}>
-                        <Link to='/'>专栏</Link>
-                        <Link to='/'>圆桌</Link>
-                        <Link to='/'>发现</Link>
-                        <Link to='/'>移动</Link>
-                        <Link to='/'>联系我们</Link>
-                        <Link to='/'>工作室</Link>
-                    </div>
+                        </TabPane>
+                        <TabPane tab="Tab 2" key="2">Content of Tab Pane 2</TabPane>
+                    </Tabs>
                 </div>
             </div>
         )
     }
 }
 
-export default Signin
+export default SignIn
